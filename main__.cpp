@@ -59,14 +59,14 @@ void Morphology_Operations();
 void Morphology_Operations_2(int, void *);
 static void drawOptFlowMap(const Mat &flow, Mat &cflowmap, int step, double, const Scalar &color);
 
-string cars_cascade_name = "/home/kridsada/Documents/LicenPLateProject/cpp_alpr/cars.xml";
+string cars_cascade_name = "cars.xml";
 CascadeClassifier cars_cascade;
 vector<Rect> cars;
 
 int main(int argc, char *argv[])
 {
     Mat image;
-    image = imread("/home/kridsada/Documents/LicenPLateProject/cpp_alpr/test_images/imageTest.jpg", CV_LOAD_IMAGE_COLOR); // Read the file
+    image = imread("./assets/images/imageTest.jpg", CV_LOAD_IMAGE_COLOR); // Read the file
 
     if (!image.data) // Check for invalid input
     {
